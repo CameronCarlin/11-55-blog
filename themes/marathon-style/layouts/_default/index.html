@@ -8,8 +8,11 @@
 {{ if gt (len $pages) 0 }}
 <div class="archive-container">
     {{ range $index, $element := $pages }}
-        {{ $isFeatured := eq $index 0 }}
-        {{ .Scratch.Set "isFeatured" $isFeatured }}
+        {{ if eq $index 0 }}
+            {{ .Scratch.Set "isFeatured" true }}
+        {{ else }}
+            {{ .Scratch.Set "isFeatured" false }}
+        {{ end }}
         {{ partial "post-card.html" . }}
     {{ end }}
 </div>
