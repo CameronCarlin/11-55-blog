@@ -1,22 +1,35 @@
 {{ $isFeatured := .Scratch.Get "isFeatured" }}
 <a href="{{ .RelPermalink }}" class="post-card {{ if $isFeatured }}featured{{ end }} post-panel">
-    <div class="post-card-meta text-muted">
-        <div class="meta-main">
-            <span class="meta-day">{{ .Date.Format "02" }}</span>
-            <span class="meta-month">{{ .Date.Format "JAN" }}</span>
+    <!-- The background hover animation happens here -->
+    <div class="hover-overlay"></div>
+
+    <div class="post-card-inner">
+        <div class="post-card-header">
+            <div class="post-date-block">
+                <span class="day">{{ .Date.Format "02" }}</span>
+                <span class="month">{{ .Date.Format "JAN" }}</span>
+            </div>
+            <div class="classification-tag">
+                <span class="label">SEC_LEVEL:</span>
+                <span class="value">{{ .Params.classification | default "UNCLASSIFIED" | upper }}</span>
+            </div>
         </div>
-        <div class="meta-classification">{{ .Params.classification | default "UNCLASSIFIED" }}</div>
-    </div>
-    
-    <div class="post-card-content">
-        <h2 class="post-card-title">{{ .Title }}</h2>
-        {{ if $isFeatured }}
-        <p class="post-card-summary text-muted">{{ .Summary | plainify | truncate 150 }}</p>
-        {{ end }}
-    </div>
-    
-    <div class="post-card-action text-muted">
-        <span class="meta-location">LOC: {{ .Params.location | default "SOL_SYSTEM" }}</span>
-        <span class="cycle-text meta-access">{{ if $isFeatured }}[ PRIME_ACCESS ]{{ else }}[ ACCESS ]{{ end }}</span>
+        
+        <div class="post-card-body">
+            <h2 class="post-card-title">{{ .Title }}</h2>
+            {{ if $isFeatured }}
+            <p class="post-card-summary text-muted">{{ .Summary | plainify | truncate 200 }}</p>
+            {{ end }}
+        </div>
+        
+        <div class="post-card-footer">
+            <div class="location-info">
+                <span class="label">LOC:</span>
+                <span class="value">{{ .Params.location | default "SOL_SYSTEM" | upper }}</span>
+            </div>
+            <div class="access-status cycle-text">
+                {{ if $isFeatured }}[ PRIME_ACCESS_GRANTED ]{{ else }}[ ACCESS_GRANTED ]{{ end }}
+            </div>
+        </div>
     </div>
 </a>
