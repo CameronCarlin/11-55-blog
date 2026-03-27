@@ -5,19 +5,19 @@ document.addEventListener('DOMContentLoaded', () => {
     const filterAuthor = document.getElementById('filterAuthor');
     const resetBtn = document.getElementById('resetFilters');
     
-    // Mobile Toggle
-    const mobileToggle = document.getElementById('mobileFilterToggle');
-    const filterContent = document.getElementById('filterContent');
+    // Nav Toggle
+    const navToggle = document.getElementById('navFilterToggle');
+    const filterContent = document.getElementById('navFilterPanel');
 
-    if (mobileToggle && filterContent) {
-        mobileToggle.addEventListener('click', () => {
+    if (navToggle && filterContent) {
+        navToggle.addEventListener('click', () => {
             filterContent.classList.toggle('active');
             if (filterContent.classList.contains('active')) {
-                mobileToggle.textContent = "[ HIDE_DATABANKS ]";
-                mobileToggle.style.borderColor = "var(--text-main)";
+                navToggle.style.color = "var(--text-main)";
+                navToggle.style.borderColor = "var(--text-main)";
             } else {
-                mobileToggle.textContent = "[ ACCESS_DATABANKS // SEARCH ]";
-                mobileToggle.style.borderColor = "var(--border-color)";
+                navToggle.style.color = "";
+                navToggle.style.borderColor = "";
             }
         });
     }
@@ -53,11 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const matchesAuthor = fAuthor === '' || data.author === fAuthor;
 
             if (matchesQuery && matchesClass && matchesLoc && matchesAuthor) {
-                card.style.display = ''; // Reset to default (grid or flex)
-                
-                // If this is the FIRST visible card, force it to be "Featured" (full width)
-                // if we want to maintain the asymmetric layout dynamically.
-                // For simplicity and avoiding jumpiness, we'll just show/hide.
+                card.style.display = ''; // Reset to default
                 visibleCount++;
             } else {
                 card.style.display = 'none';

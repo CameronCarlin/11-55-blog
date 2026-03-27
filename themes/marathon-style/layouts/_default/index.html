@@ -6,43 +6,6 @@
 
 {{ $pages := .Paginator.Pages }}
 {{ if gt (len $pages) 0 }}
-
-<!-- DATA EXTRACTION FOR FILTERS -->
-{{ $classifications := slice }}
-{{ $locations := slice }}
-{{ $authors := slice }}
-{{ range $pages }}
-    {{ $classifications = $classifications | append (.Params.classification | default "UNCLASSIFIED" | upper) }}
-    {{ $locations = $locations | append (.Params.location | default "SOL_SYSTEM" | upper) }}
-    {{ $authors = $authors | append (.Params.author | default "UNKNOWN" | upper) }}
-{{ end }}
-{{ $classifications = $classifications | uniq | sort }}
-{{ $locations = $locations | uniq | sort }}
-{{ $authors = $authors | uniq | sort }}
-
-<!-- FILTER BAR UI -->
-<div class="filter-bar">
-    <button id="mobileFilterToggle" class="tactical-btn mobile-filter-toggle">[ ACCESS_DATABANKS // SEARCH ]</button>
-    <div id="filterContent" class="filter-content">
-        <input type="text" id="searchInput" class="tactical-input" placeholder="SEARCH_DATABANKS...">
-        <div class="filter-dropdowns">
-            <select id="filterClass" class="tactical-select">
-                <option value="">ALL_CLEARANCES</option>
-                {{ range $classifications }}<option value="{{ . | lower }}">{{ . }}</option>{{ end }}
-            </select>
-            <select id="filterLoc" class="tactical-select">
-                <option value="">ALL_LOCATIONS</option>
-                {{ range $locations }}<option value="{{ . | lower }}">{{ . }}</option>{{ end }}
-            </select>
-            <select id="filterAuthor" class="tactical-select">
-                <option value="">ALL_AUTHORS</option>
-                {{ range $authors }}<option value="{{ . | lower }}">{{ . }}</option>{{ end }}
-            </select>
-            <button id="resetFilters" class="tactical-btn text-muted">[ RESET ]</button>
-        </div>
-    </div>
-</div>
-
 <div class="archive-container" id="archiveContainer">
     {{ range $index, $element := $pages }}
         {{ if eq $index 0 }}
