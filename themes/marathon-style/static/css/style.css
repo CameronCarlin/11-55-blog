@@ -139,12 +139,31 @@ body {
 .filter-bar {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
     margin-bottom: 2.5rem;
     background: var(--bg-panel);
     backdrop-filter: blur(10px);
     border: 1px solid var(--border-color);
-    padding: 1rem;
+    padding: 0.75rem;
+}
+
+.mobile-filter-toggle {
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+}
+
+.filter-content {
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px dashed var(--border-color);
+}
+
+.filter-content.active {
+    display: flex;
 }
 
 .filter-dropdowns {
@@ -202,9 +221,18 @@ body.filtering-active .active-filter-ticker {
 
 @media (min-width: 768px) {
     .filter-bar {
+        padding: 1rem 1.5rem;
+    }
+    .mobile-filter-toggle {
+        display: none;
+    }
+    .filter-content {
+        display: flex !important;
         flex-direction: row;
         align-items: center;
-        padding: 1rem 1.5rem;
+        margin-top: 0;
+        padding-top: 0;
+        border-top: none;
     }
     .filter-dropdowns {
         flex-direction: row;

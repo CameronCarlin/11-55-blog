@@ -5,6 +5,23 @@ document.addEventListener('DOMContentLoaded', () => {
     const filterAuthor = document.getElementById('filterAuthor');
     const resetBtn = document.getElementById('resetFilters');
     
+    // Mobile Toggle
+    const mobileToggle = document.getElementById('mobileFilterToggle');
+    const filterContent = document.getElementById('filterContent');
+
+    if (mobileToggle && filterContent) {
+        mobileToggle.addEventListener('click', () => {
+            filterContent.classList.toggle('active');
+            if (filterContent.classList.contains('active')) {
+                mobileToggle.textContent = "[ HIDE_DATABANKS ]";
+                mobileToggle.style.borderColor = "var(--text-main)";
+            } else {
+                mobileToggle.textContent = "[ ACCESS_DATABANKS // SEARCH ]";
+                mobileToggle.style.borderColor = "var(--border-color)";
+            }
+        });
+    }
+    
     // Only run if we are on the archive page with filters
     if (!searchInput) return;
 
