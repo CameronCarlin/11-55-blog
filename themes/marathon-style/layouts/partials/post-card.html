@@ -1,5 +1,12 @@
 {{ $isFeatured := .Scratch.Get "isFeatured" }}
-<a href="{{ .RelPermalink }}" class="post-card {{ if $isFeatured }}featured{{ end }} post-panel">
+<a href="{{ .RelPermalink }}" 
+   class="post-card {{ if $isFeatured }}featured{{ end }} post-panel"
+   data-title="{{ .Title | lower }}"
+   data-author="{{ .Params.author | default "unknown" | lower }}"
+   data-classification="{{ .Params.classification | default "unclassified" | lower }}"
+   data-location="{{ .Params.location | default "sol_system" | lower }}"
+   data-encryption="{{ .Params.encryption | default "aes_x" | lower }}"
+   data-tags="{{ if .Params.tags }}{{ delimit .Params.tags " " | lower }}{{ else }}untagged{{ end }}">
     <!-- The background hover animation happens here -->
     <div class="hover-overlay"></div>
 

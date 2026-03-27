@@ -11,11 +11,13 @@
             <span class="ticker-item">LOCATION: {{ .Params.location | upper | default "SOL_SYSTEM" }}</span>
             <span class="ticker-item cycle-text">ENCRYPTION: {{ .Params.encryption | upper | default "AES_X" }}</span>
         {{ else }}
+            <span class="ticker-item active-filter-ticker cycle-text" style="display: none;"></span>
             {{ range first 5 (where .Site.RegularPages "Section" "blog") }}
                 <span class="ticker-item cycle-text">/// NEW_INTEL: {{ .Title | upper }}</span>
                 <span class="ticker-item">[{{ .Params.classification | upper | default "UNCLASSIFIED" }}]</span>
             {{ end }}
             <!-- Repeat range for seamless scroll -->
+            <span class="ticker-item active-filter-ticker cycle-text" style="display: none;"></span>
             {{ range first 5 (where .Site.RegularPages "Section" "blog") }}
                 <span class="ticker-item cycle-text">/// NEW_INTEL: {{ .Title | upper }}</span>
                 <span class="ticker-item">[{{ .Params.classification | upper | default "UNCLASSIFIED" }}]</span>
