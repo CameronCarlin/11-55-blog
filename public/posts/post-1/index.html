@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post 1 // 11-55: Trans-Neural Network</title>
+    <link rel="stylesheet" href="http://localhost:1313/css/style.css">
+    <script>
+        function toggleTheme() {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const targetTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', targetTheme);
+            localStorage.setItem('theme', targetTheme);
+        }
+        function toggleFX() {
+            const currentFX = document.documentElement.getAttribute('data-fx');
+            const targetFX = currentFX === 'on' ? 'off' : 'on';
+            document.documentElement.setAttribute('data-fx', targetFX);
+            localStorage.setItem('fx', targetFX);
+        }
+        
+        const savedTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', savedTheme);
+        
+        const savedFX = localStorage.getItem('fx') || 'on';
+        document.documentElement.setAttribute('data-fx', savedFX);
+    </script>
+</head>
+<body>
+    
+    <div class="dot-matrix-bg"></div>
+    <div class="dot-matrix-bulge"></div>
+    <script>
+        const updateFallback = () => {
+            document.documentElement.style.setProperty('--mouse-x', (window.innerWidth / 2) + 'px');
+            document.documentElement.style.setProperty('--mouse-y', (window.innerHeight / 2) + 'px');
+        };
+        updateFallback();
+        window.addEventListener('resize', updateFallback);
+        document.addEventListener('mousemove', (e) => {
+            document.documentElement.style.setProperty('--mouse-x', e.clientX + 'px');
+            document.documentElement.style.setProperty('--mouse-y', e.clientY + 'px');
+        });
+    </script>
+
+    <header class="header-global">
+        <div class="ticker-wrap">
+            <div class="ticker-content">
+                
+                    <span class="ticker-item cycle-text">/// SOURCE: </span>
+                    <span class="ticker-item">CLASSIFICATION: </span>
+                    <span class="ticker-item">LOCATION: </span>
+                    <span class="ticker-item cycle-text">ENCRYPTION: </span>
+                    
+                    <span class="ticker-item cycle-text">/// SOURCE: </span>
+                    <span class="ticker-item">CLASSIFICATION: </span>
+                    <span class="ticker-item">LOCATION: </span>
+                    <span class="ticker-item cycle-text">ENCRYPTION: </span>
+                
+            </div>
+        </div>
+
+        <nav class="nav-fixed">
+            <a href="http://localhost:1313/" class="nav-brand">
+                <div style="width: 10px; height: 10px; border-radius: 50%;" class="cycle-bg"></div>
+                11-55_NODE
+            </a>
+            <div class="nav-links">
+                <a href="http://localhost:1313/">ARCHIVE</a>
+                <a href="/about">INTEL</a>
+                <button class="theme-btn" onclick="toggleFX()">FX_TOGGLE</button>
+                <button class="theme-btn" onclick="toggleTheme()">THEME_SWITCH</button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="content-wrapper">
+        
+<article class="post-panel">
+    <header class="post-header">
+        <div class="tactical-meta">
+            <div class="meta-box">
+                <strong>Entry_Date</strong>
+                2023.01.15
+            </div>
+            <div class="meta-box">
+                <strong>Classification</strong>
+                TOP_SECRET
+            </div>
+            <div class="meta-box">
+                <strong>Origin</strong>
+                TAU_CETI
+            </div>
+            <div class="meta-box">
+                <strong>Encryption</strong>
+                LVL_9
+            </div>
+        </div>
+        
+        <h1>Post 1</h1>
+        
+        <div class="post-sub-meta">
+            Author: DURANDAL // tags: red 
+        </div>
+    </header>
+
+    <div class="single-body">
+        <p>Tempor proident minim aliquip reprehenderit dolor et ad anim Lorem duis sint eiusmod. Labore ut ea duis dolor. Incididunt consectetur proident qui occaecat incididunt do nisi Lorem. Tempor do laborum elit laboris excepteur eiusmod do. Eiusmod nisi excepteur ut amet pariatur adipisicing Lorem.</p>
+<p>Occaecat nulla excepteur dolore excepteur duis eiusmod ullamco officia anim in voluptate ea occaecat officia. Cillum sint esse velit ea officia minim fugiat. Elit ea esse id aliquip pariatur cupidatat id duis minim incididunt ea ea. Anim ut duis sunt nisi. Culpa cillum sit voluptate voluptate eiusmod dolor. Enim nisi Lorem ipsum irure est excepteur voluptate eu in enim nisi. Nostrud ipsum Lorem anim sint labore consequat do.</p>
+
+    </div>
+
+    
+    
+    
+    <div style="margin-top: 4rem; padding-top: 3rem; border-top: 1px solid var(--border-color);">
+        <h3 style="font-family: var(--font-display); font-size: 1.5rem; text-transform: uppercase; margin-bottom: 2rem; color: var(--text-main);">
+            <span class="cycle-text">[ // ]</span> RELATED_INTEL
+        </h3>
+        <div class="archive-grid">
+            
+            <a href="/posts/post-3/" class="archive-item post-panel" style="padding: 1.5rem; gap: 1rem;">
+                <div class="item-meta text-muted" style="border-bottom: none; padding-bottom: 0;">
+                    <div class="meta-date" style="font-size: 0.7rem;">
+                        <span style="font-size: 1.2rem; font-weight: bold; color: var(--text-main);">15</span>
+                        <span>JAN</span>
+                    </div>
+                </div>
+                <div class="item-title" style="font-size: 1.25rem;">Post 3</div>
+                <div class="item-meta item-meta-right text-muted" style="border-top: none; padding-top: 0; align-items: flex-end;">
+                    <div class="meta-class" style="border-top: none; margin-top: 0; padding-top: 0; color: var(--text-main);">UNCLASSIFIED</div>
+                </div>
+            </a>
+            
+            <a href="/posts/post-2/" class="archive-item post-panel" style="padding: 1.5rem; gap: 1rem;">
+                <div class="item-meta text-muted" style="border-bottom: none; padding-bottom: 0;">
+                    <div class="meta-date" style="font-size: 0.7rem;">
+                        <span style="font-size: 1.2rem; font-weight: bold; color: var(--text-main);">15</span>
+                        <span>JAN</span>
+                    </div>
+                </div>
+                <div class="item-title" style="font-size: 1.25rem;">Post 2</div>
+                <div class="item-meta item-meta-right text-muted" style="border-top: none; padding-top: 0; align-items: flex-end;">
+                    <div class="meta-class" style="border-top: none; margin-top: 0; padding-top: 0; color: var(--text-main);">UNCLASSIFIED</div>
+                </div>
+            </a>
+            
+        </div>
+    </div>
+    
+</article>
+
+    </main>
+
+    <footer style="padding: 5vw; text-align: center; font-family: var(--font-mono); font-size: 0.7rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.2em; border-top: 1px solid var(--border-color); margin-top: auto;">
+        UESC SECURE UPLINK // PROTOCOL 11-55 // EST. 2492
+    </footer>
+</body>
+</html>

@@ -1,0 +1,25 @@
+baseURL = 'https://example.org/'
+languageCode = 'en-us'
+title = '11-55: Trans-Neural Network'
+theme = 'marathon-style'
+
+[related]
+  threshold = 80
+  includeNewer = true
+  toLower = true
+
+  [[related.indices]]
+    name = 'tags'
+    weight = 100
+
+  [[related.indices]]
+    name = 'classification'
+    weight = 50
+
+  [[related.indices]]
+    name = 'location'
+    weight = 30
+
+  [[related.indices]]
+    name = 'author'
+    weight = 20

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categories // 11-55: Trans-Neural Network</title>
+    <link rel="stylesheet" href="http://localhost:1313/css/style.css">
+    <script>
+        function toggleTheme() {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const targetTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', targetTheme);
+            localStorage.setItem('theme', targetTheme);
+        }
+        function toggleFX() {
+            const currentFX = document.documentElement.getAttribute('data-fx');
+            const targetFX = currentFX === 'on' ? 'off' : 'on';
+            document.documentElement.setAttribute('data-fx', targetFX);
+            localStorage.setItem('fx', targetFX);
+        }
+        
+        const savedTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', savedTheme);
+        
+        const savedFX = localStorage.getItem('fx') || 'on';
+        document.documentElement.setAttribute('data-fx', savedFX);
+    </script>
+</head>
+<body>
+    
+    <div class="dot-matrix-bg"></div>
+    <div class="dot-matrix-bulge"></div>
+    <script>
+        const updateFallback = () => {
+            document.documentElement.style.setProperty('--mouse-x', (window.innerWidth / 2) + 'px');
+            document.documentElement.style.setProperty('--mouse-y', (window.innerHeight / 2) + 'px');
+        };
+        updateFallback();
+        window.addEventListener('resize', updateFallback);
+        document.addEventListener('mousemove', (e) => {
+            document.documentElement.style.setProperty('--mouse-x', e.clientX + 'px');
+            document.documentElement.style.setProperty('--mouse-y', e.clientY + 'px');
+        });
+    </script>
+
+    <header class="header-global">
+        <div class="ticker-wrap">
+            <div class="ticker-content">
+                
+                    
+                        <span class="ticker-item cycle-text">/// NEW_INTEL: THE PFHOR ENCOUNTER: SECTOR 7</span>
+                        <span class="ticker-item">[SECRET]</span>
+                    
+                        <span class="ticker-item cycle-text">/// NEW_INTEL: TERMINAL ACCESS: PROTOCOL 11-55</span>
+                        <span class="ticker-item">[TOP_SECRET]</span>
+                    
+                    
+                    
+                        <span class="ticker-item cycle-text">/// NEW_INTEL: THE PFHOR ENCOUNTER: SECTOR 7</span>
+                        <span class="ticker-item">[SECRET]</span>
+                    
+                        <span class="ticker-item cycle-text">/// NEW_INTEL: TERMINAL ACCESS: PROTOCOL 11-55</span>
+                        <span class="ticker-item">[TOP_SECRET]</span>
+                    
+                
+            </div>
+        </div>
+
+        <nav class="nav-fixed">
+            <a href="http://localhost:1313/" class="nav-brand">
+                <div style="width: 10px; height: 10px; border-radius: 50%;" class="cycle-bg"></div>
+                11-55_NODE
+            </a>
+            <div class="nav-links">
+                <a href="http://localhost:1313/">ARCHIVE</a>
+                <a href="/about">INTEL</a>
+                <button class="theme-btn" onclick="toggleFX()">FX_TOGGLE</button>
+                <button class="theme-btn" onclick="toggleTheme()">THEME_SWITCH</button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="content-wrapper">
+        
+  <h1>Categories</h1>
+  
+  
+
+    </main>
+
+    <footer style="padding: 5vw; text-align: center; font-family: var(--font-mono); font-size: 0.7rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.2em; border-top: 1px solid var(--border-color); margin-top: auto;">
+        UESC SECURE UPLINK // PROTOCOL 11-55 // EST. 2492
+    </footer>
+</body>
+</html>
