@@ -1,4 +1,5 @@
-<a href="{{ .RelPermalink }}" class="post-card {{ if .Params.featured }}featured{{ end }} post-panel">
+{{ $isFeatured := .Scratch.Get "isFeatured" }}
+<a href="{{ .RelPermalink }}" class="post-card {{ if $isFeatured }}featured{{ end }} post-panel">
     <div class="post-card-meta text-muted">
         <div class="meta-main">
             <span class="meta-day">{{ .Date.Format "02" }}</span>
@@ -9,13 +10,13 @@
     
     <div class="post-card-content">
         <h2 class="post-card-title">{{ .Title }}</h2>
-        {{ if .Params.featured }}
+        {{ if $isFeatured }}
         <p class="post-card-summary text-muted">{{ .Summary | plainify | truncate 150 }}</p>
         {{ end }}
     </div>
     
     <div class="post-card-action text-muted">
         <span class="meta-location">LOC: {{ .Params.location | default "SOL_SYSTEM" }}</span>
-        <span class="cycle-text meta-access">{{ if .Params.featured }}[ PRIME_ACCESS ]{{ else }}[ ACCESS ]{{ end }}</span>
+        <span class="cycle-text meta-access">{{ if $isFeatured }}[ PRIME_ACCESS ]{{ else }}[ ACCESS ]{{ end }}</span>
     </div>
 </a>

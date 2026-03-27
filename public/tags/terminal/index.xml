@@ -1,19 +1,11 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Terminal on 11-55: Trans-Neural Network</title>
-    <link>//localhost:1313/tags/terminal/</link>
-    <description>Recent content in Terminal on 11-55: Trans-Neural Network</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <lastBuildDate>Fri, 20 Mar 2026 14:30:00 +0000</lastBuildDate>
-    <atom:link href="//localhost:1313/tags/terminal/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>TERMINAL ACCESS: PROTOCOL 11-55</title>
-      <link>//localhost:1313/blog/marathon-terminal/</link>
-      <pubDate>Fri, 20 Mar 2026 14:30:00 +0000</pubDate>
-      <guid>//localhost:1313/blog/marathon-terminal/</guid>
-      <description>&lt;h3 id=&#34;-accessing_terminal_b7_42-&#34;&gt;[ ACCESSING_TERMINAL_B7_42 ]&lt;/h3&gt;&#xA;&lt;p&gt;System integrity compromised. Encryption keys are cycling every 55 seconds. We need a direct uplink to the AI core to stabilize the situation.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;SYSTEM_LOG:&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Core Temperature: 104°C (WARNING)&lt;/li&gt;&#xA;&lt;li&gt;Neural Buffers: 88% Capacity&lt;/li&gt;&#xA;&lt;li&gt;AI Presence: &lt;strong&gt;Durandal&lt;/strong&gt; (Divergent)&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Be careful. The terminal is watching you as much as you are watching it.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;&lt;em&gt;DECRYPTION_FAILED: RE-ATTEMPTING&amp;hellip;&lt;/em&gt;&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Terminal on 11-55: Trans-Neural Network</title><link>/tags/terminal/</link><description>Recent content in Terminal on 11-55: Trans-Neural Network</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Fri, 20 Mar 2026 14:30:00 +0000</lastBuildDate><atom:link href="/tags/terminal/index.xml" rel="self" type="application/rss+xml"/><item><title>TERMINAL ACCESS: PROTOCOL 11-55</title><link>/blog/marathon-terminal/</link><pubDate>Fri, 20 Mar 2026 14:30:00 +0000</pubDate><guid>/blog/marathon-terminal/</guid><description>&lt;h3 id="-accessing_terminal_b7_42-"&gt;[ ACCESSING_TERMINAL_B7_42 ]&lt;/h3&gt;
+&lt;p&gt;System integrity compromised. Encryption keys are cycling every 55 seconds. We need a direct uplink to the AI core to stabilize the situation.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;SYSTEM_LOG:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Core Temperature: 104°C (WARNING)&lt;/li&gt;
+&lt;li&gt;Neural Buffers: 88% Capacity&lt;/li&gt;
+&lt;li&gt;AI Presence: &lt;strong&gt;Durandal&lt;/strong&gt; (Divergent)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Be careful. The terminal is watching you as much as you are watching it.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;em&gt;DECRYPTION_FAILED: RE-ATTEMPTING&amp;hellip;&lt;/em&gt;&lt;/p&gt;</description></item></channel></rss>

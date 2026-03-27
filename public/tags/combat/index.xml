@@ -1,19 +1,14 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Combat on 11-55: Trans-Neural Network</title>
-    <link>//localhost:1313/tags/combat/</link>
-    <description>Recent content in Combat on 11-55: Trans-Neural Network</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <lastBuildDate>Fri, 27 Mar 2026 10:00:00 +0000</lastBuildDate>
-    <atom:link href="//localhost:1313/tags/combat/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>THE PFHOR ENCOUNTER: SECTOR 7</title>
-      <link>//localhost:1313/blog/pfhor-encounter/</link>
-      <pubDate>Fri, 27 Mar 2026 10:00:00 +0000</pubDate>
-      <guid>//localhost:1313/blog/pfhor-encounter/</guid>
-      <description>&lt;h3 id=&#34;-mission_report_772-&#34;&gt;[ MISSION_REPORT_772 ]&lt;/h3&gt;&#xA;&lt;p&gt;The Pfhor forces have breached the outer hull. Security teams are currently engaged in Sector 7.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;TACTICAL UPDATE:&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Maintain high-ground advantage.&lt;/li&gt;&#xA;&lt;li&gt;Watch for cloaked units.&lt;/li&gt;&#xA;&lt;li&gt;Ensure all bio-scans are functional.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;&amp;ldquo;They are not like us. They do not think like us. They only consume.&amp;rdquo;&#xA;— &lt;em&gt;Commander Leela&lt;/em&gt;&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;&lt;em&gt;End of transmission.&lt;/em&gt;&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Combat on 11-55: Trans-Neural Network</title><link>/tags/combat/</link><description>Recent content in Combat on 11-55: Trans-Neural Network</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Fri, 27 Mar 2026 10:00:00 +0000</lastBuildDate><atom:link href="/tags/combat/index.xml" rel="self" type="application/rss+xml"/><item><title>THE PFHOR ENCOUNTER: SECTOR 7</title><link>/blog/pfhor-encounter/</link><pubDate>Fri, 27 Mar 2026 10:00:00 +0000</pubDate><guid>/blog/pfhor-encounter/</guid><description>&lt;h3 id="-mission_report_772-"&gt;[ MISSION_REPORT_772 ]&lt;/h3&gt;
+&lt;p&gt;The Pfhor forces have breached the outer hull. Security teams are currently engaged in Sector 7.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;TACTICAL UPDATE:&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Maintain high-ground advantage.&lt;/li&gt;
+&lt;li&gt;Watch for cloaked units.&lt;/li&gt;
+&lt;li&gt;Ensure all bio-scans are functional.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;They are not like us. They do not think like us. They only consume.&amp;rdquo;
+— &lt;em&gt;Commander Leela&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;em&gt;End of transmission.&lt;/em&gt;&lt;/p&gt;</description></item></channel></rss>
