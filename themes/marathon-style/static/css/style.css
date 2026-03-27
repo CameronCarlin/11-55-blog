@@ -189,7 +189,6 @@ body {
 }
 .post-card:hover .hover-overlay { opacity: 1; }
 .post-card:hover .text-muted { color: rgba(0,0,0,0.6); }
-
 .post-card-inner {
     position: relative;
     z-index: 1;
@@ -197,6 +196,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+    height: 100%; /* Ensure inner container fills the card */
 }
 
 .post-card-header {
@@ -219,6 +219,13 @@ body {
 .classification-tag { font-family: var(--font-mono); font-size: 0.65rem; text-align: right; }
 .classification-tag .label { opacity: 0.5; display: block; }
 .classification-tag .value { font-weight: bold; }
+
+.post-card-body {
+    flex-grow: 1; /* Pushes the footer to the bottom */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertically center the title if it's short */
+}
 
 .post-card-title {
     font-family: var(--font-display);
@@ -334,7 +341,7 @@ body {
         text-align: left; 
         margin-top: 1rem; 
     }
-    a.post-card.featured .post-card-body { padding: 0; }
+    .post-card.featured .post-card-body { padding: 0; display: block; justify-content: flex-start; }
     a.post-card.featured .post-card-title { font-size: 3rem; }
     a.post-card.featured .post-card-footer { 
         border-top: none; 
