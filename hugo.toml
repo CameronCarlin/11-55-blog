@@ -1,7 +1,8 @@
-baseURL = 'https://example.org/'
+baseURL = '/'
 languageCode = 'en-us'
 title = '11-55: Trans-Neural Network'
 theme = 'marathon-style'
+relativeURLs = true
 
 [related]
   threshold = 80

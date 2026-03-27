@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>11-55: Trans-Neural Network</title>
-    <link rel="stylesheet" href="http://localhost:1313/css/style.css">
+    <link rel="stylesheet" href="./css/style.css">
     <script>
         function toggleTheme() {
             const currentTheme = document.documentElement.getAttribute('data-theme');
@@ -13,18 +13,9 @@
             document.documentElement.setAttribute('data-theme', targetTheme);
             localStorage.setItem('theme', targetTheme);
         }
-        function toggleFX() {
-            const currentFX = document.documentElement.getAttribute('data-fx');
-            const targetFX = currentFX === 'on' ? 'off' : 'on';
-            document.documentElement.setAttribute('data-fx', targetFX);
-            localStorage.setItem('fx', targetFX);
-        }
         
         const savedTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
         document.documentElement.setAttribute('data-theme', savedTheme);
-        
-        const savedFX = localStorage.getItem('fx') || 'on';
-        document.documentElement.setAttribute('data-fx', savedFX);
     </script>
 </head>
 <body>
@@ -68,14 +59,13 @@
         </div>
 
         <nav class="nav-fixed">
-            <a href="http://localhost:1313/" class="nav-brand">
+            <a href="//localhost:1313/" class="nav-brand">
                 <div style="width: 10px; height: 10px; border-radius: 50%;" class="cycle-bg"></div>
                 11-55_NODE
             </a>
             <div class="nav-links">
-                <a href="http://localhost:1313/">ARCHIVE</a>
-                <a href="/about">INTEL</a>
-                <button class="theme-btn" onclick="toggleFX()">FX_TOGGLE</button>
+                <a href="//localhost:1313/">ARCHIVE</a>
+                <a href="./about">INTEL</a>
                 <button class="theme-btn" onclick="toggleTheme()">THEME_SWITCH</button>
             </div>
         </nav>
@@ -94,7 +84,7 @@
 
     
     
-    <a href="/blog/pfhor-encounter/" class="featured-post post-panel">
+    <a href="./blog/pfhor-encounter/" class="featured-post post-panel">
         <div class="item-meta text-muted">
             <div class="meta-date">
                 <span style="font-size: 2rem; font-weight: bold; color: var(--text-main);">27</span>
@@ -120,7 +110,7 @@ Maintain …</div>
     
     <section class="archive-grid">
         
-        <a href="/about/" class="archive-item post-panel">
+        <a href="./about/" class="archive-item post-panel">
             <div class="item-meta text-muted">
                 <div class="meta-date">
                     <span style="font-size: 1.2rem; font-weight: bold; color: var(--text-main);">27</span>
@@ -138,7 +128,7 @@ Maintain …</div>
             </div>
         </a>
         
-        <a href="/contact/" class="archive-item post-panel">
+        <a href="./contact/" class="archive-item post-panel">
             <div class="item-meta text-muted">
                 <div class="meta-date">
                     <span style="font-size: 1.2rem; font-weight: bold; color: var(--text-main);">27</span>
@@ -156,7 +146,7 @@ Maintain …</div>
             </div>
         </a>
         
-        <a href="/blog/marathon-terminal/" class="archive-item post-panel">
+        <a href="./blog/marathon-terminal/" class="archive-item post-panel">
             <div class="item-meta text-muted">
                 <div class="meta-date">
                     <span style="font-size: 1.2rem; font-weight: bold; color: var(--text-main);">20</span>
@@ -174,7 +164,7 @@ Maintain …</div>
             </div>
         </a>
         
-        <a href="/posts/post-3/" class="archive-item post-panel">
+        <a href="./posts/post-3/" class="archive-item post-panel">
             <div class="item-meta text-muted">
                 <div class="meta-date">
                     <span style="font-size: 1.2rem; font-weight: bold; color: var(--text-main);">15</span>
@@ -192,7 +182,7 @@ Maintain …</div>
             </div>
         </a>
         
-        <a href="/posts/post-2/" class="archive-item post-panel">
+        <a href="./posts/post-2/" class="archive-item post-panel">
             <div class="item-meta text-muted">
                 <div class="meta-date">
                     <span style="font-size: 1.2rem; font-weight: bold; color: var(--text-main);">15</span>
@@ -210,7 +200,7 @@ Maintain …</div>
             </div>
         </a>
         
-        <a href="/posts/post-1/" class="archive-item post-panel">
+        <a href="./posts/post-1/" class="archive-item post-panel">
             <div class="item-meta text-muted">
                 <div class="meta-date">
                     <span style="font-size: 1.2rem; font-weight: bold; color: var(--text-main);">15</span>

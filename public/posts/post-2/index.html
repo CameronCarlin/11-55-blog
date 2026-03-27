@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Post 2 // 11-55: Trans-Neural Network</title>
-    <link rel="stylesheet" href="http://localhost:1313/css/style.css">
+    <link rel="stylesheet" href="//localhost:1313/css/style.css">
     <script>
         function toggleTheme() {
             const currentTheme = document.documentElement.getAttribute('data-theme');
@@ -12,18 +12,9 @@
             document.documentElement.setAttribute('data-theme', targetTheme);
             localStorage.setItem('theme', targetTheme);
         }
-        function toggleFX() {
-            const currentFX = document.documentElement.getAttribute('data-fx');
-            const targetFX = currentFX === 'on' ? 'off' : 'on';
-            document.documentElement.setAttribute('data-fx', targetFX);
-            localStorage.setItem('fx', targetFX);
-        }
         
         const savedTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
         document.documentElement.setAttribute('data-theme', savedTheme);
-        
-        const savedFX = localStorage.getItem('fx') || 'on';
-        document.documentElement.setAttribute('data-fx', savedFX);
     </script>
 </head>
 <body>
@@ -61,14 +52,13 @@
         </div>
 
         <nav class="nav-fixed">
-            <a href="http://localhost:1313/" class="nav-brand">
+            <a href="//localhost:1313/" class="nav-brand">
                 <div style="width: 10px; height: 10px; border-radius: 50%;" class="cycle-bg"></div>
                 11-55_NODE
             </a>
             <div class="nav-links">
-                <a href="http://localhost:1313/">ARCHIVE</a>
-                <a href="/about">INTEL</a>
-                <button class="theme-btn" onclick="toggleFX()">FX_TOGGLE</button>
+                <a href="//localhost:1313/">ARCHIVE</a>
+                <a href="../../about">INTEL</a>
                 <button class="theme-btn" onclick="toggleTheme()">THEME_SWITCH</button>
             </div>
         </nav>
@@ -119,7 +109,7 @@
         </h3>
         <div class="archive-grid">
             
-            <a href="/posts/post-3/" class="archive-item post-panel" style="padding: 1.5rem; gap: 1rem;">
+            <a href="../../posts/post-3/" class="archive-item post-panel" style="padding: 1.5rem; gap: 1rem;">
                 <div class="item-meta text-muted" style="border-bottom: none; padding-bottom: 0;">
                     <div class="meta-date" style="font-size: 0.7rem;">
                         <span style="font-size: 1.2rem; font-weight: bold; color: var(--text-main);">15</span>
@@ -132,7 +122,7 @@
                 </div>
             </a>
             
-            <a href="/posts/post-1/" class="archive-item post-panel" style="padding: 1.5rem; gap: 1rem;">
+            <a href="../../posts/post-1/" class="archive-item post-panel" style="padding: 1.5rem; gap: 1rem;">
                 <div class="item-meta text-muted" style="border-bottom: none; padding-bottom: 0;">
                     <div class="meta-date" style="font-size: 0.7rem;">
                         <span style="font-size: 1.2rem; font-weight: bold; color: var(--text-main);">15</span>

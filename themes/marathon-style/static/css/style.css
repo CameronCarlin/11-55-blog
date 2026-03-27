@@ -43,14 +43,18 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  /* Tactical Containment */
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+/* Ensure grid/flex children don't blow out their containers */
+.archive-item, .featured-post, .post-panel, .archive-item > *, .featured-post > * {
+  min-width: 0;
 }
 
 /* --- TACTICAL DOT MATRIX BACKGROUND --- */
 body::before { display: none; } /* Disable old background logic */
-
-html[data-fx="off"] .dot-matrix-bulge {
-  display: none;
-}
 
 .dot-matrix-bg, .dot-matrix-bulge {
   position: fixed;
