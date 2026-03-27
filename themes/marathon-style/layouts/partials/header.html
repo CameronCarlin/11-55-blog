@@ -1,0 +1,37 @@
+<div class="ticker-wrap">
+    <div class="ticker-content">
+        {{ if .IsPage }}
+            <span class="ticker-item cycle-text">/// SOURCE: {{ .Params.author | upper | default "UNKNOWN" }}</span>
+            <span class="ticker-item">CLASSIFICATION: {{ .Params.classification | upper | default "UNCLASSIFIED" }}</span>
+            <span class="ticker-item">LOCATION: {{ .Params.location | upper | default "SOL_SYSTEM" }}</span>
+            <span class="ticker-item cycle-text">ENCRYPTION: {{ .Params.encryption | upper | default "AES_X" }}</span>
+            <!-- Duplicate for seamless scroll -->
+            <span class="ticker-item cycle-text">/// SOURCE: {{ .Params.author | upper | default "UNKNOWN" }}</span>
+            <span class="ticker-item">CLASSIFICATION: {{ .Params.classification | upper | default "UNCLASSIFIED" }}</span>
+            <span class="ticker-item">LOCATION: {{ .Params.location | upper | default "SOL_SYSTEM" }}</span>
+            <span class="ticker-item cycle-text">ENCRYPTION: {{ .Params.encryption | upper | default "AES_X" }}</span>
+        {{ else }}
+            {{ range first 5 (where .Site.RegularPages "Section" "blog") }}
+                <span class="ticker-item cycle-text">/// NEW_INTEL: {{ .Title | upper }}</span>
+                <span class="ticker-item">[{{ .Params.classification | upper | default "UNCLASSIFIED" }}]</span>
+            {{ end }}
+            <!-- Repeat range for seamless scroll -->
+            {{ range first 5 (where .Site.RegularPages "Section" "blog") }}
+                <span class="ticker-item cycle-text">/// NEW_INTEL: {{ .Title | upper }}</span>
+                <span class="ticker-item">[{{ .Params.classification | upper | default "UNCLASSIFIED" }}]</span>
+            {{ end }}
+        {{ end }}
+    </div>
+</div>
+
+<nav class="nav-fixed">
+    <a href="{{ .Site.BaseURL }}" class="nav-brand">
+        <div class="status-indicator cycle-bg"></div>
+        11-55_NODE
+    </a>
+    <div class="nav-links">
+        <a href="{{ .Site.BaseURL }}">ARCHIVE</a>
+        <a href="/about">INTEL</a>
+        <button class="theme-btn" aria-label="Toggle Theme" onclick="toggleTheme()">THEME_SWITCH</button>
+    </div>
+</nav>

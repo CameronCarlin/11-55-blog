@@ -12,13 +12,11 @@
             document.documentElement.setAttribute('data-theme', targetTheme);
             localStorage.setItem('theme', targetTheme);
         }
-        
         const savedTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
         document.documentElement.setAttribute('data-theme', savedTheme);
     </script>
 </head>
 <body>
-    <!-- Interactive Dot Matrix Background -->
     <div class="dot-matrix-bg"></div>
     <div class="dot-matrix-bulge"></div>
     <script>
@@ -35,51 +33,13 @@
     </script>
 
     <header class="header-global">
-        <div class="ticker-wrap">
-            <div class="ticker-content">
-                {{ if .IsPage }}
-                    <span class="ticker-item cycle-text">/// SOURCE: {{ .Params.author | upper }}</span>
-                    <span class="ticker-item">CLASSIFICATION: {{ .Params.classification | upper }}</span>
-                    <span class="ticker-item">LOCATION: {{ .Params.location | upper }}</span>
-                    <span class="ticker-item cycle-text">ENCRYPTION: {{ .Params.encryption | upper }}</span>
-                    <!-- Duplicate for seamless scroll -->
-                    <span class="ticker-item cycle-text">/// SOURCE: {{ .Params.author | upper }}</span>
-                    <span class="ticker-item">CLASSIFICATION: {{ .Params.classification | upper }}</span>
-                    <span class="ticker-item">LOCATION: {{ .Params.location | upper }}</span>
-                    <span class="ticker-item cycle-text">ENCRYPTION: {{ .Params.encryption | upper }}</span>
-                {{ else }}
-                    {{ range first 5 (where .Site.RegularPages "Section" "blog") }}
-                        <span class="ticker-item cycle-text">/// NEW_INTEL: {{ .Title | upper }}</span>
-                        <span class="ticker-item">[{{ .Params.classification | upper }}]</span>
-                    {{ end }}
-                    <!-- Repeat range for seamless scroll -->
-                    {{ range first 5 (where .Site.RegularPages "Section" "blog") }}
-                        <span class="ticker-item cycle-text">/// NEW_INTEL: {{ .Title | upper }}</span>
-                        <span class="ticker-item">[{{ .Params.classification | upper }}]</span>
-                    {{ end }}
-                {{ end }}
-            </div>
-        </div>
-
-        <nav class="nav-fixed">
-            <a href="{{ .Site.BaseURL }}" class="nav-brand">
-                <div style="width: 10px; height: 10px; border-radius: 50%;" class="cycle-bg"></div>
-                11-55_NODE
-            </a>
-            <div class="nav-links">
-                <a href="{{ .Site.BaseURL }}">ARCHIVE</a>
-                <a href="/about">INTEL</a>
-                <button class="theme-btn" onclick="toggleTheme()">THEME_SWITCH</button>
-            </div>
-        </nav>
+        {{ partial "header.html" . }}
     </header>
 
     <main class="content-wrapper">
         {{ block "main" . }}{{ end }}
     </main>
 
-    <footer style="padding: 5vw; text-align: center; font-family: var(--font-mono); font-size: 0.7rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.2em; border-top: 1px solid var(--border-color); margin-top: auto;">
-        UESC SECURE UPLINK // PROTOCOL 11-55 // EST. 2492
-    </footer>
+    {{ partial "footer.html" . }}
 </body>
 </html>

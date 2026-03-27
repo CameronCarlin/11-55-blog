@@ -1,58 +1,18 @@
 {{ define "main" }}
-<section class="hero-v2">
-    <span class="status-pill" style="margin-bottom: 1rem;">[ SYSTEM_STATUS: NOMINAL ]</span>
-    <h1>Intelligence<br>Archive</h1>
+<section class="hero-section">
+    <span class="status-pill">[ SYSTEM_STATUS: NOMINAL ]</span>
+    <h1 class="hero-title">Intelligence Archive</h1>
 </section>
 
-{{ $paginator := .Paginator }}
-{{ if gt (len $paginator.Pages) 0 }}
+{{ $pages := .Paginator.Pages }}
+{{ if gt (len $pages) 0 }}
 <div class="archive-container">
-
-    {{ $featured := index $paginator.Pages 0 }}
-    <!-- FEATURED POST -->
-    <a href="{{ $featured.RelPermalink }}" class="featured-post post-panel">
-        <div class="item-meta text-muted">
-            <div class="meta-date">
-                <span style="font-size: 2rem; font-weight: bold; color: var(--text-main);">{{ $featured.Date.Format "02" }}</span>
-                <span>{{ $featured.Date.Format "JAN" }}</span>
-            </div>
-            <div class="meta-class">{{ $featured.Params.classification | default "UNCLASSIFIED" }}</div>
-        </div>
-        
-        <div>
-            <div class="item-title">{{ $featured.Title }}</div>
-            <div class="item-summary">{{ $featured.Summary | plainify | truncate 150 }}</div>
-        </div>
-        
-        <div class="item-meta item-meta-right text-muted">
-            <div class="meta-loc">LOC: {{ $featured.Params.location | default "SOL_SYSTEM" }}</div>
-            <div class="cycle-text meta-access" style="font-weight: bold; margin-top: 0.75rem;">[ PRIME_ACCESS ]</div>
-        </div>
-    </a>
-
-    <!-- STANDARD GRID -->
-    {{ if gt (len $paginator.Pages) 1 }}
-    <section class="archive-grid">
-        {{ range after 1 $paginator.Pages }}
-        <a href="{{ .RelPermalink }}" class="archive-item post-panel">
-            <div class="item-meta text-muted">
-                <div class="meta-date">
-                    <span style="font-size: 1.2rem; font-weight: bold; color: var(--text-main);">{{ .Date.Format "02" }}</span>
-                    <span>{{ .Date.Format "JAN" }}</span>
-                </div>
-            </div>
-            
-            <div class="item-title">
-                {{ .Title }}
-            </div>
-            
-            <div class="item-meta item-meta-right text-muted" style="border-top: 1px solid var(--border-color); padding-top: 0.75rem;">
-                <div class="meta-class">{{ .Params.classification | default "UNCLASSIFIED" }}</div>
-                <div class="cycle-text meta-access">[ ACCESS ]</div>
-            </div>
-        </a>
-        {{ end }}
-    </section>
+    {{ range $index, $element := $pages }}
+        {{ $isFeatured := eq $index 0 }}
+        {{ .Scratch.Set "featured" $isFeatured }}
+        <!-- Set featured param dynamically for partial if not in frontmatter -->
+        {{ if $isFeatured }}{{ .Params.Set "featured" true }}{{ end }}
+        {{ partial "post-card.html" . }}
     {{ end }}
 </div>
 {{ end }}
