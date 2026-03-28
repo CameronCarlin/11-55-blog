@@ -378,6 +378,48 @@ body.filtering-active .active-filter-ticker {
     line-height: 1;
 }
 
+/* --- MEDIA (Images, Videos, Iframes) --- */
+.post-content img, .post-content video, .post-content iframe {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 3rem 0;
+    border: 1px solid var(--border-color);
+    padding: 0.5rem;
+    background: rgba(0, 0, 0, 0.2);
+    filter: grayscale(80%) contrast(1.1); /* Tactical Surveillance Feed Filter */
+    transition: all 0.4s ease;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.post-content img:hover, .post-content video:hover, .post-content iframe:hover {
+    filter: grayscale(0%) contrast(1);
+    border-color: var(--chartreuse);
+    box-shadow: 0 0 20px rgba(212, 255, 0, 0.1);
+}
+
+.post-content figure {
+    margin: 3rem 0;
+}
+.post-content figure img, .post-content figure video {
+    margin: 0;
+}
+.post-content figcaption {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    text-align: right;
+    margin-top: 0.5rem;
+    border-bottom: 1px dashed var(--border-color);
+    padding-bottom: 0.5rem;
+}
+.post-content figcaption::before {
+    content: "/// ATTACHMENT_DATA: ";
+    color: var(--text-main);
+    font-weight: bold;
+}
+
 .related-intel { margin-top: 5rem; padding-top: 3rem; border-top: 1px solid var(--border-color); }
 .related-title { font-family: var(--font-display); font-size: 1.5rem; margin-bottom: 2.5rem; text-transform: uppercase; }
 
