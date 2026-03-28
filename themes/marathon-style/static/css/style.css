@@ -390,9 +390,12 @@ body.filtering-active .active-filter-ticker {
     filter: grayscale(80%) contrast(1.1); /* Tactical Surveillance Feed Filter */
     transition: all 0.4s ease;
     box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
 }
 
-.post-content img:hover, .post-content video:hover, .post-content iframe:hover {
+/* Desktop Hover OR Mobile Decrypted State */
+.post-content img:hover, .post-content video:hover, .post-content iframe:hover,
+.post-content img.decrypted, .post-content video.decrypted, .post-content iframe.decrypted {
     filter: grayscale(0%) contrast(1);
     border-color: var(--chartreuse);
     box-shadow: 0 0 20px rgba(212, 255, 0, 0.1);

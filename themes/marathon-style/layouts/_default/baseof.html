@@ -42,5 +42,14 @@
 
     {{ partial "footer.html" . }}
     <script src="{{ "js/intel-filter.js" | relURL }}"></script>
+    <script>
+        // Media Decryption Toggle for Mobile
+        document.addEventListener('click', (e) => {
+            const isMedia = e.target.matches('.post-content img, .post-content video, .post-content iframe');
+            if (isMedia) {
+                e.target.classList.toggle('decrypted');
+            }
+        });
+    </script>
 </body>
 </html>
